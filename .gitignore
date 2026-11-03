@@ -1,0 +1,7 @@
+venv/
+__pycache__/
+.env
+.deepeval/
+.pytest_cache/
+nohup.out
+results.txt

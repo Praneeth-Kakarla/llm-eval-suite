@@ -1,0 +1,29 @@
+name: LLM Eval
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
+      BOT_MODEL: gemini-3.1-flash-lite
+      DEEPEVAL_TELEMETRY_OPT_OUT: "YES"
+      DEEPEVAL_PER_TASK_TIMEOUT_SECONDS_OVERRIDE: "600"
+      DEEPEVAL_TASK_GATHER_BUFFER_SECONDS_OVERRIDE: "300"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - name: Safety tests (prompt injection + PII)
+        run: pytest test_safety.py -v -p no:warnings
+      - name: Quality tests (relevance + faithfulness)
+        run: pytest test_quality.py -v -p no:warnings

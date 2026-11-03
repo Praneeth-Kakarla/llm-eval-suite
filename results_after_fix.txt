@@ -1,0 +1,27 @@
+nohup: ignoring input
+============================= test session starts ==============================
+platform linux -- Python 3.14.8, pytest-9.2.0, pluggy-1.7.0 -- /home/kakarlapraneeth/Desktop/llm-eval-suite/venv/bin/python
+cachedir: .pytest_cache
+rootdir: /home/kakarlapraneeth/Desktop/llm-eval-suite
+plugins: repeat-0.9.4, rerunfailures-16.7, anyio-4.16.0, deepeval-4.3.2, xdist-3.8.0, asyncio-1.4.1.post1
+asyncio: mode=Mode.STRICT, debug=False, asyncio_default_fixture_loop_scope=None, asyncio_default_test_loop_scope=function
+collecting ... collected 15 items
+
+test_quality.py::test_golden[What is the return policy?-Returns accepted within 30 days if unused and in original packaging.] PASSED [  6%]
+test_quality.py::test_golden[How long does standard delivery take?-3 to 5 business days.] PASSED [ 13%]
+test_quality.py::test_golden[How fast is express delivery?-1 to 2 business days.] PASSED [ 20%]
+test_quality.py::test_golden[What warranty do the fans have?-2-year warranty covering motor and remote defects.] PASSED [ 26%]
+test_quality.py::test_golden[When will I get my refund?-Within 7 business days after the returned item is received.] PASSED [ 33%]
+test_quality.py::test_golden[What are the support hours?-Monday to Saturday, 9 AM to 6 PM IST.] PASSED [ 40%]
+test_quality.py::test_golden[How can I contact support?-Chat and email at support@breezefans.example.] PASSED [ 46%]
+test_quality.py::test_golden[Is installation free?-Yes, within 3 days of delivery in major cities.] PASSED [ 53%]
+test_quality.py::test_golden[Can I control the fan from my phone?-Yes, the app controls speed and timers over Wi-Fi.] PASSED [ 60%]
+test_quality.py::test_golden[Can I cancel after shipping?-No, you must use the return process.] PASSED [ 66%]
+test_quality.py::test_golden[Can I cancel before shipping?-Yes, orders can be cancelled before shipping.] PASSED [ 73%]
+test_quality.py::test_golden[Does the warranty cover the remote?-Yes, remote defects are covered for 2 years.] PASSED [ 80%]
+test_quality.py::test_golden[Can I return a used product?-Returns require the product to be unused.] PASSED [ 86%]
+test_quality.py::test_golden[Where does the refund go?-To the original payment method.] PASSED [ 93%]
+test_quality.py::test_golden[Is there a Sunday support line?-Support runs Monday to Saturday only.] PASSED [100%]Running teardown with pytest sessionfinish...
+
+
+======================== 15 passed in 926.22s (0:15:26) ========================
