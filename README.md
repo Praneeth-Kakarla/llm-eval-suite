@@ -29,6 +29,8 @@ An automated test suite for a RAG-style customer-support bot (BreezeFans), built
 - **Retrieval bug found by the suite:** keyword matching didn't strip punctuation or handle plurals, so questions like "How can I contact support?" retrieved the wrong context and the bot gave non-answers (3 of 15 cases failed). Fixing tokenization (punctuation, stopwords, plurals) resolved all three.
 - **Robustness:** a safety test once hit an empty LLM response (it did not reproduce on rerun). Added retry handling for empty and overloaded (503/429) responses.
 
+- **Test design fix:** the question "Is installation free?" failed relevancy in CI, because the grounded answer also mentions timing and the question did not ask for it. Rewrote the question to ask for both cost and timing instead of lowering the threshold.
+
 ## Project structure
 
 | File | Purpose |

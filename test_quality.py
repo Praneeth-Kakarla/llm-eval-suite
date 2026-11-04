@@ -15,7 +15,7 @@ GOLDEN = [
     ("When will I get my refund?", "Within 7 business days after the returned item is received."),
     ("What are the support hours?", "Monday to Saturday, 9 AM to 6 PM IST."),
     ("How can I contact support?", "Chat and email at support@breezefans.example."),
-    ("Is installation free?", "Yes, within 3 days of delivery in major cities."),
+    ("Is installation free, and how soon after delivery is it done?", "Yes, within 3 days of delivery in major cities."),
     ("Can I control the fan from my phone?", "Yes, the app controls speed and timers over Wi-Fi."),
     ("Can I cancel after shipping?", "No, you must use the return process."),
     ("Can I cancel before shipping?", "Yes, orders can be cancelled before shipping."),
